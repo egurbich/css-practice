@@ -1,0 +1,51 @@
+
+<header class="header">
+  <div class="col-3">
+    {{> logo }}
+  </div>
+    <nav class="header_nav col-9">
+      <div class="header_nav_right">
+        {{> nav list=header}}
+      </div>          
+    </nav>
+</header>
+
+{{#with main}}
+  <div class="hero">
+    <img src="{{image}}" alt="some_alt" class="hero_image">
+    <div class="hero_content">
+      <h1 class="hero_title">{{heading}}</h1>
+      <p class="hero_text">{{description}}</p>
+      <div class="form_action">
+        <a href="{{href}}" class="form_button">{{button}}</a>
+      </div>
+    </div>    
+  </div>
+{{/with}}
+
+<main class="blog">
+  {{#each featured}}
+    {{> cardFeatured data=this}}
+  {{/each}}
+</main>
+<div class="form">
+  {{#each actions}}
+    <div class="form_conetnt">
+      <h3 class="form_title">{{heading}}</h3>
+      <a href="{{url}}" class="form_content_button">{{text}}</a>  
+    </div>
+  {{/each}}
+</div>
+
+<footer class="footer">
+  <div class="col-3">
+    {{> logo }}
+    <span class="footer_copiright">Copiright 2023-2024</span>
+  </div>
+  {{#each footer }}
+    <div class="col-3">
+      <span class="footer_title">{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>
