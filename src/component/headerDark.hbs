@@ -1,0 +1,20 @@
+
+{{#with data}}
+  <header class="header">
+    <div class="col-3">
+      {{> logo data=brandName }}
+    </div>
+      <nav class="header_nav">
+        <div class="header_nav_right">
+          {{> nav list=links}}
+        </div>          
+      </nav>
+  </header>
+  <div class="header_ad">
+    <div class="logo_content">
+      <span class="ad_logo">Ad</span>
+      <span class="add_text">{{ad.text}}: {{ad.url}}</span>
+    </div>
+    <span class="users_online">Users online: {{userOnline}}</span>
+  </div>
+{{/with}}

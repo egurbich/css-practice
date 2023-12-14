@@ -1,0 +1,18 @@
+{{#with data}}
+<div class="articles">
+  <div class="articles_header">
+    <h2 class="articles_title">Our Articles</h2>
+    <a href="#" class="view_all_articles">View All</a>
+  </div>
+  <div class="articles_cards">
+      {{#each this}}
+        <div class="article_card">
+          <img src="{{photo}}" class="article_img" />
+          <h3 class="article_name">{{name}}</h3>
+          <p class="article_description">{{description}}</p>
+          <a href="#" class="article_button">Read All</a>
+        </div>
+      {{/each}}
+  </div>
+</div>
+{{/with}}
